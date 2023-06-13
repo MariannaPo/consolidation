@@ -1,26 +1,31 @@
-import React from 'react';
+import React, { useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Greetings from './components/Greetings';
+import Category from './components/Сategory';
+
+
 
 function App() {
+
+  let [greetings, setGreetings] = useState('HELLO');
+  
+
+
+  // function startWorkHandler(){ 
+  //   if (greetings){
+  //     console.log(setGreetings('8888'))
+  //   } else {
+  //     return greetings
+  //   }
+  //   };
+    
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Greetings/>
     </div>
-  );
+  )
 }
 
 export default App;
